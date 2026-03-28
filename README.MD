@@ -1,35 +1,45 @@
-SKETCHUP 2026 LINUX INSTALLATION GUIDE
---------------------------------------
+# 🏛️ SketchUp 2026 for Linux (NVIDIA Optimized)
 
-This package contains everything you need to run SketchUp 2026 on Linux 
-(Ubuntu, Fedora, Arch, etc.) with optimized NVIDIA performance.
+[![Wine Support](https://img.shields.io/badge/Wine-Staging%2011.0+-red.svg)](https://www.winehq.org/)
+[![Platform](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://en.wikipedia.org/wiki/Linux)
+[![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20Optimized-green.svg)](https://www.nvidia.com/)
 
-PREREQUISITES:
-- Wine (Staging recommended)
-- Winetricks installed
-- NVIDIA Drivers (for GPU acceleration)
+An automated compatibility layer and installer script to run **SketchUp 2026** on Linux distributions with full hardware acceleration, fixed graphics settings, and high-quality rendering.
 
-STEPS:
-1. Open a terminal inside this folder.
-2. Grant execution permission to the script:
-   chmod +x install.sh
-3. Run the installer:
-   ./install.sh
+---
 
-THE SCRIPT AUTOMATICALLY:
-- Configures a dedicated Wine Prefix (~/.sketchup2026)
-- Installs .NET 4.8, VC++ Redistributables, DXVK, and VKD3D
-- Forces High-Quality Graphics settings (Anti-Aliasing 4x)
-- Bypasses common installation errors found in standard installers
+## 📸 Showcase
+![SketchUp 2026 running on Fedora Linux with NVIDIA GTX 1060](screenshot.png)
+*SketchUp 2026 running perfectly on Fedora 44 (KDE Plasma) using this compatibility setup.*
 
-POST-INSTALLATION:
-- Copy 'SketchUp.desktop' to your Desktop or ~/.local/share/applications/ 
-  to see it in your App Menu.
-- The launcher is pre-configured to use NVIDIA GPU offloading.
+---
 
-Enjoy modeling on Linux!
+## 🌟 Overview
 
-CONTACT & SUPPORT:
-------------------
-If you have questions or need help with this package, contact:
-Seid Ramizi: seid.cincin@gmail.com
+Running SketchUp 2026 on Linux via Wine usually results in "Invalid Handle" errors during installation and greyed-out graphics settings (Low quality) within the app. This project solves those issues by:
+- **Automating the environment setup** (Wine Prefix & DLL overrides).
+- **Enabling High-Quality Graphics** (forcing Anti-Aliasing and High-Res textures via Registry).
+- **Optimizing performance** for NVIDIA GTX/RTX cards using DXVK and VKD3D.
+
+## 🚀 Key Features
+
+*   ✅ **Auto-Installer:** A single `install.sh` script that handles everything.
+*   ✅ **Graphics Fix:** Unlocks "Anti-Aliasing" and "Maximum Texture Size" which are typically disabled in Wine.
+*   ✅ **NVIDIA Offloading:** Pre-configured desktop launcher to ensure the app uses your discrete GPU.
+*   ✅ **Stability:** Configured to use the stable Classic Graphics Engine to prevent "Bug Splat" crashes.
+
+## 📦 Installation Guide
+
+### 1. Download the Package
+👉 **[Download Full Package (Mega.nz)](https://mega.nz/file/uoxnFbgC#vAVYb51tAd5VKcoarW4MMDOejuEsA_1MF3NmL7R6kKY)**
+
+### 2. Run the Setup
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+## 🤝 Contact & Support
+**Project Maintainer:** Seid Ramizi  
+📧 **Email:** seid.cincin@gmail.com
+
