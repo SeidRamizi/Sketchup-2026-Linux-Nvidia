@@ -1,44 +1,40 @@
-# 🏛️ SketchUp 2026 for Linux (NVIDIA Optimized)
+# 🏛️ SketchUp 2026 for Linux (NVIDIA & AMD Optimized)
 
 ---
 
 ## 📸 Showcase
-![SketchUp 2026 running on Fedora Linux with NVIDIA GTX 1060](screenshot.png)
+![SketchUp 2026 running on Linux](screenshot.png)
 
 ---
 
-## ⚠️ Prerequisites (MUST INSTALL FIRST)
-Before running the script, make sure you have **Wine** and **Winetricks** installed:
-
-### For Ubuntu / Linux Mint / Pop!_OS:
-```bash
-sudo apt update && sudo apt install wine winetricks -y
-```
+## 📦 Download Links
+🚀 **[Download UNIVERSAL Version (Recommended)](https://mega.nz/file/HgJmDSbY#h4JhUNr_zjbHcJtjzkULqVQag6_rz1v7QUQ3B4NvlD0)**  
+🟢 **[Download NVIDIA ONLY Version (Legacy)](https://mega.nz/file/S04E0D4J#vAVYb51tAd5VKcoarW4MMDOejuEsA_1MF3NmL7R6kKY)**  
 
 ---
 
-## 📦 Installation Guide
-1. **Download the Package:** [Mega.nz Link](https://mega.nz/file/uoxnFbgC#vAVYb51tAd5VKcoarW4MMDOejuEsA_1MF3NmL7R6kKY)
-2. **Extract** the ZIP file.
-3. **Run the Installer:**
-   ```bash
-   chmod +x install.sh
-   ./install.sh
-   ```
+## 🛠️ GPU Specific Fixes
+
+### 🟢 NVIDIA Users
+- The launcher is pre-configured. Manual launch:
+  `__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia WINEPREFIX=$HOME/.sketchup2026 wine ...`
+
+### 🔴 AMD & 🔵 Intel Users
+- Hybrid Graphics (Laptops): Use `DRI_PRIME=1` to force dedicated GPU.
 
 ---
 
-## 🛠️ Troubleshooting (FIX ISSUES)
-If SketchUp hangs at the **Welcome Screen** or fails to open a project, run this combined "Quick Fix" command in your terminal:
+## 🔥 Quick Fix for Common Issues
+If SketchUp hangs at the **Welcome Screen**, run this inside the package folder:
 
 ```bash
-# 1. Close all Wine processes
+# 1. Close processes
 wineserver -k
 
-# 2. Skip Welcome Window & Force Activation
+# 2. Skip Welcome screen
 WINEPREFIX=$HOME/.sketchup2026 wine reg add "HKEY_CURRENT_USER\Software\SketchUp\SketchUp 2026\Common" /v "ShowWelcomeWindow" /t REG_DWORD /d 0 /f
 
-# 3. Ensure Activation file is applied (run inside the package folder)
+# 3. Apply Activation
 mkdir -p "$HOME/.sketchup2026/dosdevices/c:/Program Files/SketchUp/SketchUp 2026/SketchUp"
 cp crack/SketchUp.exe "$HOME/.sketchup2026/dosdevices/c:/Program Files/SketchUp/SketchUp 2026/SketchUp/SketchUp.exe"
 ```
