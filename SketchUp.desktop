@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=SketchUp 2026 (Linux)
+Comment=3D Modeling Software optimized for Linux
+Exec=bash -c "WINEPREFIX=$HOME/.sketchup2026 __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia wine '$HOME/.sketchup2026/dosdevices/c:/Program Files/SketchUp/SketchUp 2026/SketchUp/SketchUp.exe'"
+Icon=sketchup
+Terminal=false
+Type=Application
+Categories=Graphics;3DGraphics;
+Keywords=3d;modeling;sketchup;
