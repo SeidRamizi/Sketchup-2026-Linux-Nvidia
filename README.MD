@@ -1,5 +1,5 @@
 # 🏛️ SketchUp 2026 for Linux (NVIDIA & AMD Optimized)
-
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X51WU7K8)
 ---
 
 ## 📸 Showcase
